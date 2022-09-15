@@ -9,10 +9,10 @@ namespace Array
 		public static void Main()
 		{
 		  
-		  Console.WriteLine("Index: 0");
+		Console.WriteLine("Index: 0");
           string[] email = new string[]{"ralphlauren@gmail.com", "ralphlauren123@gmail.com", "ralphlauren.velasco@gmail.com"};
           string[] userName = new string[] {"rlauren", "ralph", "ralphlauren"};
-		  string[] password = new string[] {"ralph123", "ralph@123","ralphlauren"};
+		string[] password = new string[] {"ralph123", "ralph@123","ralphlauren"};
 	
 		int i = 0;
 		Console.WriteLine("Email: " + email[i]);
