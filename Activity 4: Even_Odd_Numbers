@@ -1,0 +1,81 @@
+using System;
+using System.Linq;
+using System.Collections;
+
+namespace Even_Odd
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+         int[] arr = new int[5];
+        Console.WriteLine("Array Program:");
+        Console.WriteLine("≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈");
+        int a;
+        Console.Write("\nElement[0]: ");
+        a =Convert.ToInt32(Console.ReadLine());
+         if(a%2 == 0){
+
+         	Console.WriteLine("Even number");
+         	}
+         	else
+         	{
+         	 Console.WriteLine("Odd number" );	
+         	}
+        Console.Write("\nElement[1]: ");
+         int b;
+         b = Convert.ToInt32(Console.ReadLine());
+             if(b%2 == 0)
+             {
+         	Console.WriteLine("Even number");
+         	}
+         	else{
+         	Console.WriteLine("Odd number" );	
+         	}
+        Console.Write("\nElement[2]: ");
+         int c;
+         c = Convert.ToInt32(Console.ReadLine());
+            if(c%2 == 0)
+             {
+         	Console.WriteLine("Even number");
+         	}
+         	else
+         	{
+             Console.WriteLine("Odd number" );
+         	}	
+           int d;
+        Console.Write("\nElement[3]: ");
+         d = Convert.ToInt32(Console.ReadLine());
+             if(d%2 == 0)
+             {
+         	Console.WriteLine("Even number");
+         	}
+         	else
+         	{
+             Console.WriteLine("Odd number" );
+         	}
+           int e;
+        Console.Write("\nElement[4]: ");
+         e = Convert.ToInt32(Console.ReadLine());
+             if(e%2 == 0)
+
+             {
+
+         	Console.WriteLine("Even number");
+         	}
+         	else
+         	{
+             Console.WriteLine("Odd number" );
+         	}	
+        Console.WriteLine("≈≈≈≈≈≈≈≈≈≈≈≈≈≈");
+         
+         
+         	
+         
+     		
+			
+		}
+		
+		}		
+		
+}	
