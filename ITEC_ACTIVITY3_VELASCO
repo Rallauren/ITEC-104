@@ -14,7 +14,7 @@ namespace Array
           string[] userName = new string[] {"rlauren", "ralph", "ralphlauren"};
 		string[] password = new string[] {"ralph123", "ralph@123","ralphlauren"};
 	
-		int i = 0;
+		int i = 1;
 		Console.WriteLine("Email: " + email[i]);
         Console.WriteLine("User name: " + userName[i]);
         Console.WriteLine("Password: " + password[i]);
