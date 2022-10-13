@@ -1,0 +1,70 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace HashSet
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+			int a = 0;
+			int b = 0;
+          HashSet<int> set1 = new HashSet<int>();
+          HashSet<int> set2 = new HashSet<int>();
+          for(int i =0; i<5; i++)
+          {
+          	set1.Add(1 + i);
+          }
+          for(int j = 1; j<6; j++)
+          {
+          	set2.Add(2*j);
+          }
+          Console.WriteLine("===Hashset 1===");
+          foreach(int element in set1)
+          {
+          	Console.Write("\nElement [{0}]: ", a);
+          	Console.WriteLine(element);
+          	a++;
+          }
+          Console.WriteLine("\n===Hashset 2===");
+          foreach(var elements in set2)
+          {
+          	Console.Write("\nElement [{0}]: ", b);
+          	Console.WriteLine(elements);
+          	b++;
+          }
+          Console.WriteLine("\n=============");
+          Console.Write("UNION: ");
+          set1.UnionWith(set2);
+          foreach(var item in set1)
+          {
+          	Console.Write($"{item}, ");
+          }
+          HashSet<int> myset1 = new HashSet<int>();
+          HashSet<int> myset2 = new HashSet<int>();
+          for(int i =0; i<5; i++)
+          {
+          	myset1.Add(1 + i);
+          }
+          for(int j = 1; j<6; j++)
+          {
+          	myset2.Add(2*j);
+          }
+          Console.WriteLine("\n");
+          Console.Write("INTERSECTION: ");
+          myset1.IntersectWith(myset2);
+          foreach(var items in myset1)
+          {
+          	Console.Write($"{items}, ");
+          }
+          Console.WriteLine("\n");
+		   Console.Write("SET DIFFERENCE: ");
+		   set1.ExceptWith(set2);
+		   foreach(var numbers in set1)
+		   {
+		   	Console.Write($"{numbers}, ");
+		   }
+		}
+	}
+}
