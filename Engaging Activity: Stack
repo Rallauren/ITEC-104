@@ -1,0 +1,95 @@
+using System;
+
+using System.Linq;
+
+using System.Collections;
+
+
+
+namespace Avtivity_8
+
+{ 
+
+	public static class Program
+
+	{
+
+		public static void Main()
+
+		{
+
+        Stack mystack = new Stack();
+
+        mystack.Push("H");
+
+        mystack.Push("P");
+
+        mystack.Push("L");
+
+        Console.WriteLine("The current stack:\n");
+
+        foreach(string stack in mystack)
+
+        {
+
+        	Console.Write(stack + " ");
+
+        }
+
+        Console.WriteLine("\n");
+
+        Console.WriteLine("Adding new stack:\n");
+
+         mystack.Push("A");
+
+         mystack.Push("R");
+
+         foreach(var items in mystack)
+
+         {
+
+         	Console.Write(items+ " ");
+
+         }
+
+         Console.WriteLine("\n"); 
+
+         Console.WriteLine("The next Popable is: {0}", mystack.Peek());
+
+         mystack.Pop();
+
+         Console.WriteLine("\nAfter removing R, the current stack is:\n");
+
+         foreach(var items in mystack)
+
+         {
+
+         	Console.Write(items + " ");
+
+         }
+
+         Console.WriteLine("\n"); 
+
+         Console.WriteLine("Removing three elements\n");
+
+         Console.WriteLine("The current stack is:");
+
+         mystack.Pop();
+
+         mystack.Pop();
+
+         mystack.Pop();
+
+         foreach(var items in mystack)
+
+         {
+
+         	Console.Write(items + " ");
+
+         }
+
+		}
+
+	
+
+	}
