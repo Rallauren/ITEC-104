@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic; 
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication4
+{
+    static class  Program
+    {
+        public static int N = 10;
+        
+       public static int[] stack = new int[N];   
+    
+      public static  int top = -1;
+       public static void Push()
+        {
+            int x;
+            Console.WriteLine("Enter data");
+             x = int.Parse(Console.ReadLine());
+            if (top == N-1)
+            {
+                Console.WriteLine("Overflow");
+            }
+            else
+            {
+             top = top+1;
+              stack[top] = x;
+            }
+        }
+       public static void Pop()
+        {
+            int item;
+            if (top == -1)
+            {
+                Console.WriteLine("Underflow");
+            }
+            else
+            {
+                item = stack[top];
+                top = top-1;
+                Console.WriteLine("The pop item is: {0}", item);
+                
+            }
+        }
+      public static void Peek() 
+        {
+            if (top == -1)
+            {
+                Console.WriteLine("The stack is empty");
+            }
+            else
+            {
+                Console.WriteLine("The top element is: {0}",stack[top]);
+            }
+        }
+       public static void Display()
+        {
+            int i;
+            for (i = top; i >= 0; i--)
+            {
+                Console.WriteLine("The stack element is: {0}", stack[i]);
+            }
+        }
+    
+        static void Main()
+        {
+             int choice;
+            do
+            {
+                Console.WriteLine("=========================");
+                Console.WriteLine("Enter your choice");
+                Console.WriteLine("=========================");
+                Console.WriteLine("1. Add an element");
+                Console.WriteLine("2. Remove the top element");
+                Console.WriteLine("3. See the top element");
+                Console.WriteLine("4. Display all the element");
+                Console.WriteLine("5. Exit");
+               
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1: Push();
+                        break;
+                    case 2: Pop();
+                        break;
+                    case 3: Peek();
+                        break;
+                    case 4: Display();
+                        break;
+                    default: Console.WriteLine("Invalid choice");
+                        break;
+                }
+            } while (choice != 5);
+            
+        }
+    }
+}
